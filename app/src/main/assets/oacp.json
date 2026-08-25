@@ -1,0 +1,44 @@
+{
+  "oacpVersion":"0.3",
+  "appId":"__APPLICATION_ID__",
+  "displayName":"Hark Shizuku Bridge",
+  "appDomains":["device_control"],
+  "appKeywords":["android","phone","control","tap","swipe","back","home"],
+  "appAliases":["phone control","device control"],
+  "capabilities":[
+    {
+      "id":"home",
+      "description":"Go to Android home screen",
+      "domain":"device_control",
+      "aliases":["home","go home"],
+      "examples":["go home"],
+      "keywords":["home"],
+      "parameters":[],
+      "confirmation":"never",
+      "executionMessage":"Going home.",
+      "visibility":"public",
+      "requiresForeground":false,
+      "completionMode":"async_result",
+      "sensitivity":"low",
+      "idempotent":true,
+      "invoke":{"android":{"type":"broadcast","action":"__APPLICATION_ID__.oacp.ACTION_HOME"}}
+    },
+    {
+      "id":"back",
+      "description":"Press Android back",
+      "domain":"device_control",
+      "aliases":["back","go back"],
+      "examples":["go back"],
+      "keywords":["back"],
+      "parameters":[],
+      "confirmation":"never",
+      "executionMessage":"Going back.",
+      "visibility":"public",
+      "requiresForeground":false,
+      "completionMode":"async_result",
+      "sensitivity":"low",
+      "idempotent":false,
+      "invoke":{"android":{"type":"broadcast","action":"__APPLICATION_ID__.oacp.ACTION_BACK"}}
+    }
+  ]
+}
