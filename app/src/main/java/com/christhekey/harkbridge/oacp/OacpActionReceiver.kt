@@ -22,7 +22,7 @@ class OacpActionReceiver : OacpReceiver() {
                     flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 }
                 context.startActivity(intent)
-                OacpResult.success("Home", "Opened home screen")
+                OacpResult.success("Home", mapOf("message" to "Opened home screen"))
             }
 
             action.endsWith("ACTION_BACK") -> {
