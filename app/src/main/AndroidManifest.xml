@@ -56,14 +56,6 @@
             android:exported="true"
             android:permission="android.permission.INTERACT_ACROSS_USERS_FULL" />
 
-        <receiver
-            android:name="com.christhekey.harkbridge.oacp.OacpActionReceiver"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="${applicationId}.oacp.ACTION_HOME"/>
-                <action android:name="${applicationId}.oacp.ACTION_BACK"/>
-            </intent-filter>
-        </receiver>
 
 </application>
 
